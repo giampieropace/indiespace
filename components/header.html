@@ -1,0 +1,17 @@
+    <hgroup class="fade-in" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
+        <h2>${siteName}</h2>
+        <template json-if="siteTagline">
+            <p>${siteTagline}</p>
+        </template>
+    </hgroup>
+
+    <details class="dropdown" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
+        <summary role="button" class="outline">
+            Menu
+        </summary>
+            <ul role="navigation">
+                <template json-each="menu">
+                    <li><a @href="`${url}`">${label}</a></li>
+                </template>
+            </ul>
+    </details>

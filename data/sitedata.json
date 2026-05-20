@@ -1,0 +1,19 @@
+{
+  "siteName": "Giampi 🌌 Space",
+  "siteTagline": "",
+  
+  "menu": [
+    { "label": "Home", "url": "/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "About", "url": "/about.html" },
+    { "label": "Contacts", "url": "/contacts.html" }
+  ],
+  
+  "socials": [
+    { "platform": "GitHub", "url": "https://github.com/tuonome", "icon": "github" },
+    { "platform": "Twitter", "url": "https://twitter.com/tuonome", "icon": "twitter" },
+    { "platform": "Mastodon", "url": "https://mastodon.social/@tuonome", "icon": "mastodon" }
+  ],
+  
+  "copyrightText": "©2026 - Giampiero"
+}

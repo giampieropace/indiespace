@@ -1,0 +1,10 @@
+<footer class="container" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
+    <nav class="footer__socials">
+        <ul>
+            <template json-each="socials">
+                <li><a @href="`${url}`">${platform}</a></li>
+            </template>
+        </ul>
+    </nav>
+    <p class="footer__copyright">${copyrightText}</p>
+</footer>

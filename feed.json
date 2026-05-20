@@ -1,0 +1,31 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Titolo del tuo blog",
+  "home_page_url": "https://iltuosito.com/",
+  "feed_url": "https://iltuosito.com/feed.json",
+  "description": "La descrizione del tuo blog.",
+  "authors": [{ "name": "Il tuo nome" }],
+  "items": [
+    {
+      "id": "https://iltuosito.com/blog/primo-post",
+      "url": "https://iltuosito.com/blog/primo-post.html",
+      "title": "Titolo del Primo Post",
+      "date_published": "2026-05-10",
+      "summary": "Una breve descrizione del post."
+    },
+    {
+      "id": "https://iltuosito.com/blog/primo-post",
+      "url": "https://iltuosito.com/blog/primo-post.html",
+      "title": "Titolo del Primo Post",
+      "date_published": "2026-05-10",
+      "summary": "Una breve descrizione del post."
+    },
+    {
+      "id": "https://iltuosito.com/blog/primo-post",
+      "url": "https://iltuosito.com/blog/primo-post.html",
+      "title": "Titolo del Primo Post",
+      "date_published": "2026-05-10",
+      "summary": "Una breve descrizione del post."
+    }
+  ]
+}
