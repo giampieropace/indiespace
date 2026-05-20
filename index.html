@@ -11,7 +11,6 @@
   
 <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/pico.css">
-  <style>.header-placeholder{ min-height: 160px;} .footer-placeholder{ min-height: 160px;} .logo{ aspect-ratio: 200 / 60; width: 200px;} </style>
   <link rel="stylesheet" href="/assets/css/style.css">
 <!-- Site Icons -->  
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -24,14 +23,14 @@
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
-  <header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container"></header>
+  <header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header"></header>
 
-  <main class="container">
+  <main class="container" id="main">
     <article id="intro">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dicta debitis rem accusantium explicabo, fugiat dolore sapiente expedita! Quidem repellendus placeat voluptatem sint corporis autem nihil sed. Nulla, accusamus explicabo!
     </article>
 
-    <h2>Latest Posts</h2>
+    <h3 id="home__list-title">Latest Posts</h3>
     list of the latest posts from the feed.
 
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur repellat veniam asperiores odio consequuntur sapiente ipsam cupiditate tempora unde, eveniet atque alias libero deleniti voluptatibus, voluptatem mollitia itaque fuga laborum?</p>
@@ -40,7 +39,7 @@
 
   </main>
   
-  <footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer-placeholder" class="footer-placeholder"></footer>
+  <footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer"></footer>
 </body>
 
 </html>

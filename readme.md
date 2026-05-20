@@ -1,0 +1,1 @@
+This is an experiment aimed at building a website without build steps, SSG or complex workflows.

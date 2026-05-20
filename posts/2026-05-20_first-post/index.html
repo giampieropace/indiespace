@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-EN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+<!-- Site meta -->
+    <title>Page_Title</title>
+    <meta name="description" content="Page_description">
+  
+<!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/pico.css">
+    <style>md-block:not([rendered]) { display: none }</style>
+    <link rel="stylesheet" href="/assets/css/style.css">
+<!-- Site Icons -->  
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+<!-- Javascript -->
+    <script src="/assets/js/htmx.min.js"></script>
+    <script src="/assets/js/htmx-json.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <script type="module">
+        import { URLs as MdBlockURLS } from "/assets/js/md-block.js";
+
+        // Configura Prism PRIMA che md-block venga usato
+        MdBlockURLS.Prism = "/assets/js/prism.js";
+        MdBlockURLS.PrismCSS = "/assets/css/prism.css";
+
+        // Ora importa e registra md-block (se non è già registrato)
+        import("/assets/js/md-block.js");
+    </script>
+</head>
+
+<body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
+  <header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header"></header>
+
+  <main class="container" id="main">
+    <md-block src="content.md">
+	    `content.md` was *not* found
+    </md-block>    
+  </main>
+  
+  <footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer"></footer>
+</body>
+
+</html>
