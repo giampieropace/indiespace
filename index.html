@@ -12,7 +12,7 @@
 <!-- Site Icons -->
 <link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/icon.svg" type="image/svg+xml" /><link rel="apple-touch-icon" href="icon.png" />
 <!-- Javascript -->
-<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script><script src="/assets/js/main.js"></script>
+<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
@@ -34,5 +34,7 @@
 
 </main>
 <footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer>
+
+<script src="/assets/js/main.js"></script>
 </body>
 </html>

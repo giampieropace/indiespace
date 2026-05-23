@@ -8,11 +8,11 @@
     <meta name="description" content="A shorter version of the markdown syntax guide from https://www.markdownguide.org/basic-syntax/">
   
 <!-- CSS -->
- <link rel="stylesheet" href="/assets/css/pico.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/prism-dark.css" />
+ <link rel="stylesheet" href="/assets/css/pico.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/prism/prism-dark.css" />
 <!-- Site Icons -->  
  <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon.png">
 <!-- Javascript -->
-<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script><script src="/assets/js/main.js"></script>
+<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
@@ -21,10 +21,10 @@
     
     <main class="container" id="main">
         <md-block src="content.md">
-            <span aria-busy="true">Loading content...</span>
+            <span aria-busy="true">Loading...</span>
         </md-block>
 
-        <div style="text-align: right;">
+        <div id="article__actions">
             <a class="share-btn">${shareButtonText}</a>
         </div>
     </main>
