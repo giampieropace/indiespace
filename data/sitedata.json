@@ -9,6 +9,8 @@
     { "label": "Contacts", "url": "/contacts/" },
     { "label": "Sample Post", "url": "/posts/2026-05-20_markdown-syntax/" }
   ],
+
+  "shareButtonText": "Share this article",
   
   "socials": [
     { "platform": "GitHub", "url": "https://github.com/tuonome", "icon": "github" },

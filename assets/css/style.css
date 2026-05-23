@@ -65,6 +65,10 @@ a.share-btn:hover {
     cursor: pointer;
 }
 
+a.share-btn-visited {
+    text-decoration: none;
+}
+
 /* md-block specifico */
 md-block, md-span, .markdown-body {
     max-width: 100%;
