@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-EN">
+<html lang="en-EN" data-theme="dark">
 <head>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="light dark" />
 
@@ -12,7 +12,7 @@
 <!-- Site Icons -->
 <link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/icon.svg" type="image/svg+xml" /><link rel="apple-touch-icon" href="icon.png" />
 <!-- Javascript -->
-<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/main.js"></script>
+<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script><script src="/assets/js/main.js"></script>
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
@@ -21,7 +21,11 @@
 <main class="container" id="main">
 
     <article id="intro">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis atque praesentium sapiente rem vel commodi consectetur laboriosam asperiores aliquam. Iusto, amet quod? Aut, possimus deserunt? Dolor eum enim dolorem reiciendis!
+        <md-block>
+            ### 👋 Hello!
+            
+            Wellcome to my personal website!
+        </md-block>
     </article>
 
 <h3 id="home__list-title">Latest Content</h3>
