@@ -140,8 +140,175 @@ footer {
     details.dropdown > summary + ul {
         right: 0;
         left: auto;
+        text-align: right;
     }
 }
+
+/* Content List Styles */
+.content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-card {
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    padding-bottom: 1.5rem;
+}
+
+.content-card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.content-card h2 a {
+    text-decoration: none;
+    color: var(--pico-color);
+}
+
+.content-card h2 a:hover {
+    text-decoration: underline;
+    color: var(--pico-primary);
+}
+
+.content-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--pico-muted-color);
+}
+
+.content-category {
+    background-color: var(--pico-primary-background);
+    color: var(--pico-primary-inverse);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.content-summary {
+    margin: 0.75rem 0;
+    color: var(--pico-muted-color);
+    line-height: 1.5;
+}
+
+.content-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.content-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    background-color: var(--pico-secondary-background);
+    color: var(--pico-secondary-inverse);
+    border-radius: 999px;
+}
+
+/* Pagination */
+.content-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.content-pagination button {
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.content-pagination button.active {
+    background-color: var(--pico-primary);
+    color: var(--pico-primary-inverse);
+    border-color: var(--pico-primary);
+}
+
+.content-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.content-pagination span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    color: var(--pico-muted-color);
+}
+
+/* States */
+.loading, .content-empty, .content-error {
+    text-align: center;
+    padding: 3rem;
+    color: var(--pico-muted-color);
+}
+
+.content-error {
+    color: var(--pico-del-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-card h2 {
+        font-size: 1.25rem;
+    }
+    
+    .content-meta {
+        font-size: 0.75rem;
+    }
+}
+
+/* Content List - Pagination */
+.content-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.content-pagination button {
+    min-width: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content-pagination button.active {
+    background-color: var(--pico-primary);
+    color: var(--pico-primary-inverse);
+    border-color: var(--pico-primary);
+}
+
+.content-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.content-pagination span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    color: var(--pico-muted-color);
+}
+
+.loading, .content-empty, .content-error {
+    text-align: center;
+    padding: 3rem;
+    color: var(--pico-muted-color);
+}
+
+.content-error {
+    color: var(--pico-del-color);
+}
+
+
 
 #article__actions {
     margin-top: 3rem;

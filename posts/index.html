@@ -4,15 +4,15 @@
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="light dark" />
 
 <!-- Site meta -->
-    <title>My Personal Website</title>
-    <meta name="description" content="This is my personal website, take a look around!" />
+    <title>List_page_title</title>
+    <meta name="description" content="List_page_description" />
 
 <!-- CSS -->
 <link rel="stylesheet" href="/assets/css/pico.css" /><link rel="stylesheet" href="/assets/css/style.css" />
 <!-- Site Icons -->
 <link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/icon.svg" type="image/svg+xml" /><link rel="apple-touch-icon" href="icon.png" />
 <!-- Javascript -->
-<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
+<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script><script src="/assets/js/jstable.min.js"></script>
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
@@ -22,23 +22,21 @@
 
     <article id="intro">
         <md-block>
-            ### 👋 Hello!
+            # List Page Title
             
-            Wellcome to my personal website!
+            Write here what this content list is about.
         </md-block>
     </article>
 
     <h3 id="home__list-title">Latest Content</h3>
 
-    <div id="content-list">
+    <div id="content-list" data-category="Blog">
         <span aria-busy="true">Loading...</span>
     </div>
         
     <!-- Container per la paginazione -->
     <div id="content-pagination"></div>
-
-    </main>
-
+    
 
 </main>
 <footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer>
