@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-EN" data-theme="dark">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="light dark" />
+
+<!-- Site meta -->
+    <title>Page_title</title>
+    <meta name="description" content="Page:_description" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/pico.css" /><link rel="stylesheet" href="/assets/css/style.css" />
+<!-- Site Icons -->
+<link rel="icon" href="/favicon.png" sizes="any" /><link rel="icon" href="/icon.svg" type="image/svg+xml" /><link rel="apple-touch-icon" href="icon.png" />
+<!-- Javascript -->
+<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
+</head>
+
+<body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
+<a href="#main" class="skip-to-content">Skip to content</a>
+<header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header" ></header>
+    
+<main class="container" id="main">
+
+    <md-block src="content.md">
+        <span aria-busy="true">Loading...</span>
+    </md-block>
+    
+</main>
+<footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
