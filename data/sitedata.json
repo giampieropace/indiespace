@@ -5,10 +5,9 @@
   
   "menu": [
     { "label": "Home", "url": "/" },
-    { "label": "Blog", "url": "/posts/" },
     { "label": "About", "url": "/about/" },
-    { "label": "Contacts", "url": "/contacts/" },
-    { "label": "Link to a single post", "url": "/posts/2026-05-20_markdown-syntax/" }
+    { "label": "Blog", "url": "/posts/" },
+    { "label": "Contacts", "url": "/contacts/" }
   ],
 
   "shareButtonText": "Share this article",

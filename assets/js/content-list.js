@@ -6,7 +6,7 @@
     if (!container) return;
     
     // Configurazione
-    var itemsPerPage = 10;
+    var itemsPerPage = 5;
     var currentPage = 1;
     var allItems = [];
     var activeCategory = '';  // Categoria attiva (vuota = tutte)
