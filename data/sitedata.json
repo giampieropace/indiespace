@@ -15,7 +15,7 @@
   
   "socials": [
     { "platform": "Reddit", "url": "https://reddit.com/tuonome", "icon": "reddit"},
-    { "platform": "X", "url": "https://x.com/tuonome", "icon": "x"},
+    { "platform": "X", "url": "https://x.com/tuonome", "icon": ""},
     { "platform": "Mastodon", "url": "https://mastodon.social/@tuonome", "icon": "mastodon"}
   ],
   

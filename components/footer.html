@@ -2,7 +2,11 @@
     <nav class="footer__socials">
         <ul class="footer__socials-list">
             <template json-each="socials">
-                <li class="footer__social-item"><a class="footer__social-link" @href="`${url}`" @title="`'Link to ${platform} profile'`" target="_blank"><img class="footer__social-icon" @src="`/assets/img/social/${icon}.svg`" @alt="`'${platform} icon'`">${platform}</a></li> 
+                <li class="footer__social-item"><a class="footer__social-link" @href="`${url}`" @title="`'Link to ${platform} profile'`" target="_blank">
+                    <template json-if="icon">
+                        <img class="footer__social-icon" @src="`/assets/img/social/${icon}.svg`" @alt="`'${platform} icon'`"></template>${platform}
+                    </a>
+                </li>    
             </template>
         </ul>
     </nav>

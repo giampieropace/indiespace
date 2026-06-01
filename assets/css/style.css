@@ -128,7 +128,7 @@ main.container {
     position: relative;
     overflow-x: auto;
     width: 100%;
-    min-height: 80vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
