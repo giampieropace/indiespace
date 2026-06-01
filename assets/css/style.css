@@ -1,9 +1,8 @@
-/* Smooth scroll per tutta la pagina */
-html {
-    scroll-behavior: smooth;
-}
+/* ============================================================
+   1. ACCESSIBILITY
+   ============================================================ */
 
-/* Skip-to-content link (accessibilità) */
+/* Skip-to-content link */
 .skip-to-content {
     position: absolute;
     top: -100%;
@@ -24,8 +23,19 @@ html {
     outline-offset: 2px;
 }
 
-/* Gestione overflow generale */
-html, body {
+
+/* ============================================================
+   2. BASE / GLOBAL
+   ============================================================ */
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Overflow and base sizing */
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
@@ -37,24 +47,16 @@ body {
     overflow-x: hidden;
 }
 
-/* Container responsivo */
-.container {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
 
-main.container {
-    position: relative;
-    overflow-x: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+/* ============================================================
+   3. TYPOGRAPHY & LINKS
+   ============================================================ */
 
-/* Contenuti lunghi */
-pre, code, kbd, samp {
+/* Long content wrapping */
+pre,
+code,
+kbd,
+samp {
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -69,26 +71,10 @@ pre {
     border-radius: 6px;
 }
 
-/* Tabelle */
-table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-    width: fit-content;
-}
-
-/* Immagini */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Link */
+/* Links */
 a {
     word-wrap: break-word;
     overflow-wrap: break-word;
-
 }
 
 a.share-btn:hover {
@@ -99,8 +85,73 @@ a.share-btn-visited {
     text-decoration: none;
 }
 
-/* md-block specifico */
-md-block, md-span, .markdown-body {
+hgroup a {
+    text-decoration: none;
+}
+
+
+/* ============================================================
+   4. MEDIA & EMBEDS
+   ============================================================ */
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ============================================================
+   5. TABLES
+   ============================================================ */
+
+table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    width: fit-content;
+}
+
+
+/* ============================================================
+   6. LAYOUT (CONTAINERS)
+   ============================================================ */
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main.container {
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header & Footer shared layout */
+header,
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 148px;
+}
+
+
+/* ============================================================
+   7. MD-BLOCK
+   ============================================================ */
+
+md-block,
+md-span,
+.markdown-body {
     max-width: 100%;
     overflow-x: auto;
 }
@@ -115,66 +166,11 @@ md-block code {
     word-break: break-word;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .container {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-    }
-    
-    pre, code {
-        font-size: 0.85rem;
-    }
-    
-    table {
-        font-size: 0.85rem;
-    }
-}
 
-header {
-    min-height: 148px;
-}
+/* ============================================================
+   8. CONTENT LIST
+   ============================================================ */
 
-hgroup a {
-    text-decoration: none;
-}
-
-header,
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-
-    main.container {
-        max-width: 768px;
-        padding-right: var(--pico-spacing);
-        padding-left: var(--pico-spacing);
-        margin-bottom: 1rem;
-    }
-
-    header.container,
-    footer.container {
-        max-width: 950px;
-        padding-right: var(--pico-spacing);
-        padding-left: var(--pico-spacing);
-    }
-}
-
-
-/* menu direction fix */
-@media (max-width: 1280px) {
-    details.dropdown > summary + ul {
-        right: 0;
-        left: auto;
-        text-align: right;
-    }
-}
-
-/* Content List Styles */
 .content-list {
     display: flex;
     flex-direction: column;
@@ -239,62 +235,11 @@ footer {
     border-radius: 999px;
 }
 
-/* Pagination */
-.content-pagination {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
-    padding: 1rem 0;
-}
 
-.content-pagination button {
-    min-width: 2.5rem;
-    text-align: center;
-}
+/* ============================================================
+   9. PAGINATION
+   ============================================================ */
 
-.content-pagination button.active {
-    background-color: var(--pico-primary);
-    color: var(--pico-primary-inverse);
-    border-color: var(--pico-primary);
-}
-
-.content-pagination button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.content-pagination span {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 0.5rem;
-    color: var(--pico-muted-color);
-}
-
-/* States */
-.loading, .content-empty, .content-error {
-    text-align: center;
-    padding: 3rem;
-    color: var(--pico-muted-color);
-}
-
-.content-error {
-    color: var(--pico-del-color);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .content-card h2 {
-        font-size: 1.25rem;
-    }
-    
-    .content-meta {
-        font-size: 0.75rem;
-    }
-}
-
-/* Content List - Pagination */
 .content-pagination {
     display: flex;
     flex-wrap: wrap;
@@ -328,21 +273,19 @@ footer {
     color: var(--pico-muted-color);
 }
 
-.loading, .content-empty, .content-error {
-    text-align: center;
-    padding: 3rem;
-    color: var(--pico-muted-color);
-}
 
-.content-error {
-    color: var(--pico-del-color);
-}
-
-
+/* ============================================================
+   10. ARTICLE
+   ============================================================ */
 
 #article__actions {
     margin-top: 3rem;
 }
+
+
+/* ============================================================
+   11. FOOTER
+   ============================================================ */
 
 footer {
     margin-top: 1rem;
@@ -368,17 +311,105 @@ footer.container {
     padding-left: 0.5rem;
 }
 
+.footer__socials-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__social-icon {
+    margin-right: .2rem;
+    transform: scale(.8);
+}
+
+
+/* ============================================================
+   12. STATES
+   ============================================================ */
+
+.loading,
+.content-empty,
+.content-error {
+    text-align: center;
+    padding: 3rem;
+    color: var(--pico-muted-color);
+}
+
+.content-error {
+    color: var(--pico-del-color);
+}
+
+
+/* ============================================================
+   13. ANIMATIONS
+   ============================================================ */
+
 .fade-in {
-    animation: fadeIn .6s ease-out forwards;
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0)
+        transform: scale(0);
     }
     to {
         opacity: 1;
         transform: scale(100%);
+    }
+}
+
+
+/* ============================================================
+   14. MEDIA QUERIES
+   ============================================================ */
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    pre,
+    code {
+        font-size: 0.85rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .content-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .content-meta {
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablet+ (min-width: 768px) */
+@media (min-width: 768px) {
+    main.container {
+        max-width: 768px;
+        padding-right: var(--pico-spacing);
+        padding-left: var(--pico-spacing);
+        margin-bottom: 1rem;
+    }
+
+    header.container,
+    footer.container {
+        max-width: 950px;
+        padding-right: var(--pico-spacing);
+        padding-left: var(--pico-spacing);
+    }
+}
+
+/* Dropdown right-alignment for medium screens */
+@media (max-width: 1280px) {
+    details.dropdown > summary + ul {
+        right: 0;
+        left: auto;
+        text-align: right;
     }
 }

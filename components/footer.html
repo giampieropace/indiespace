@@ -1,8 +1,8 @@
 <footer class="container" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
     <nav class="footer__socials">
-        <ul>
+        <ul class="footer__socials-list">
             <template json-each="socials">
-                <li><a @href="`${url}`">${platform}</a></li>
+                <li class="footer__social-item"><a class="footer__social-link" @href="`${url}`" @title="`'Link to ${platform} profile'`" target="_blank"><img class="footer__social-icon" @src="`/assets/img/social/${icon}.svg`" @alt="`'${platform} icon'`">${platform}</a></li> 
             </template>
         </ul>
     </nav>

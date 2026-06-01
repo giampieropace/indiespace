@@ -1,21 +1,22 @@
 {
+  "siteURL": "https://example.com",
   "siteName": "My 🌌 Website",
   "siteTagline": "Just another digital garden",
   
   "menu": [
     { "label": "Home", "url": "/" },
-    { "label": "Blog", "url": "/blog/" },
+    { "label": "Blog", "url": "/posts/" },
     { "label": "About", "url": "/about/" },
     { "label": "Contacts", "url": "/contacts/" },
-    { "label": "Sample Post with longer text", "url": "/posts/2026-05-20_markdown-syntax/" }
+    { "label": "Link to a single post", "url": "/posts/2026-05-20_markdown-syntax/" }
   ],
 
   "shareButtonText": "Share this article",
   
   "socials": [
-    { "platform": "GitHub", "url": "https://github.com/tuonome", "icon": "github" },
-    { "platform": "Twitter", "url": "https://twitter.com/tuonome", "icon": "twitter" },
-    { "platform": "Mastodon", "url": "https://mastodon.social/@tuonome", "icon": "mastodon" }
+    { "platform": "Reddit", "url": "https://reddit.com/tuonome", "icon": "reddit"},
+    { "platform": "X", "url": "https://x.com/tuonome", "icon": "x"},
+    { "platform": "Mastodon", "url": "https://mastodon.social/@tuonome", "icon": "mastodon"}
   ],
   
   "copyrightText": "©2026 - Giampiero"
