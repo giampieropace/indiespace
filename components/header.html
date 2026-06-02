@@ -13,24 +13,18 @@
 </hgroup>
 
 <!-- Menu dropdown -->
-<details class="dropdown" 
-         hx-get="/data/sitedata.json" 
-         hx-trigger="load" 
-         hx-swap="json">
-    
-    <summary role="button" class="outline" aria-label="Menu">
-        Menu
-    </summary>
-    
+<nav class="menu-container" hx-get="/data/sitedata.json" 
+            hx-trigger="load" 
+            hx-swap="json">
     <ul role="navigation" aria-label="Main navigation">
         <template json-each="menu">
             <li>
                 <a @href="`${url || '#'}`" 
-                   class="dropdown-link"
-                   @aria-current="`${window.location.pathname === url ? 'page' : undefined}`">
+                    class="dropdown-link"
+                    @aria-current="`${window.location.pathname === url ? 'page' : undefined}`">
                     ${label || 'Link'}
                 </a>
             </li>
         </template>
     </ul>
-</details>
+</nav>

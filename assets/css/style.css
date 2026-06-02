@@ -141,7 +141,12 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    min-height: 148px;
+}
+
+/* Header specific layout*/
+header {
+    margin-top: 2.6rem;
+    margin-bottom: 1.8rem;
 }
 
 
@@ -364,7 +369,8 @@ footer.container {
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .container {
-        padding: 0.75rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
     }
 
     pre,
@@ -399,14 +405,5 @@ footer.container {
         max-width: 950px;
         padding-right: var(--pico-spacing);
         padding-left: var(--pico-spacing);
-    }
-}
-
-/* Dropdown right-alignment for medium screens */
-@media (max-width: 1280px) {
-    details.dropdown > summary + ul {
-        right: 0;
-        left: auto;
-        text-align: right;
     }
 }
