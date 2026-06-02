@@ -364,8 +364,7 @@ footer.container {
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .container {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+        padding: 0.75rem;
     }
 
     pre,
