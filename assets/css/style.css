@@ -307,16 +307,16 @@ footer.container {
     margin-bottom: 0;
 }
 
-.footer__socials {
+.footer__links {
     padding-left: 0.5rem;
 }
 
-.footer__socials-list {
+.footer__links-list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.footer__social-icon {
+.footer__link-icon {
     margin-right: .2rem;
     transform: scale(.8);
 }
@@ -350,12 +350,6 @@ footer.container {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-    }
-    60% {
-        opacity: .3;
-    }
-    80% {
-        opacity: .9;
     }
     100% {
         opacity: 1;

@@ -1,39 +1,38 @@
 <!doctype html>
 <html lang="en-EN" data-theme="dark">
 <head>
- <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<style>html.reduce-fouce{ opacity: 0;} html.reduce-fouce body{ min-height: 100vh;}</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 
 <!-- Site meta -->
     <title>Markdown Syntax Guide</title>
     <meta name="description" content="A shorter version of the markdown syntax guide from https://www.markdownguide.org/basic-syntax/">
   
 <!-- CSS -->
- <link rel="stylesheet" href="/assets/css/pico.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/prism/prism-dark.css" />
+<link rel="stylesheet" href="/assets/css/pico.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/prism/prism-dark.css" />
 <!-- Site Icons -->  
- <link rel="icon" href="/favicon.png" sizes="any" />
+<link rel="icon" href="/favicon.png" sizes="any" />
 <!-- Javascript -->
-<script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
+<script src="/assets/js/htmx-fouce.js"></script><script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
 <a href="#main" class="skip-to-content">Skip to content</a>
+<div class="header-placeholder"><header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header" ></header></div>
 
-    <header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header"></header>
-    
-    <main class="container fade-in" id="main">
-        <md-block src="content.md">
-            <span aria-busy="true">Loading...</span>
-        </md-block>
+<main class="container fade-in" id="main">
+    <md-block src="content.md">
+        <span aria-busy="true">Loading...</span>
+    </md-block>
 
-        <div id="article__actions">
-            <button class="share-btn">${shareButtonText}</button>
-        </div>
-    </main>
+    <div id="article__actions">
+        <button class="share-btn">${shareButtonText}</button>
+    </div>
+</main>
 
+<div id="footer-placeholder"><footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer></div>
 
-<footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer"></footer>
-
-<!-- Footer Scripts -->
+<!-- footer scripts -->
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/prism.js"></script>
 

@@ -1,17 +1,36 @@
-    <hgroup class="fade-in" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
-        <a href="/" ><h2>${siteName}</h2></a>
-        <template json-if="siteTagline">
-            <p>${siteTagline}</p>
-        </template>
-    </hgroup>
+<hgroup class="fade-in" 
+        hx-get="/data/sitedata.json" 
+        hx-trigger="load" 
+        hx-swap="json">
+    
+    <a href="/" class="site-home-link">
+        <h2>${siteName || 'NoBS Website'}</h2>
+    </a>
+    
+    <template json-if="siteTagline">
+        <p class="site-tagline">${siteTagline}</p>
+    </template>
+</hgroup>
 
-    <details class="dropdown" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
-        <summary role="button" class="outline">
-            Menu
-        </summary>
-            <ul role="navigation">
-                <template json-each="menu">
-                    <li><a @href="`${url}`">${label}</a></li>
-                </template>
-            </ul>
-    </details>
+<!-- Menu dropdown -->
+<details class="dropdown" 
+         hx-get="/data/sitedata.json" 
+         hx-trigger="load" 
+         hx-swap="json">
+    
+    <summary role="button" class="outline" aria-label="Menu">
+        Menu
+    </summary>
+    
+    <ul role="navigation" aria-label="Main navigation">
+        <template json-each="menu">
+            <li>
+                <a @href="`${url || '#'}`" 
+                   class="dropdown-link"
+                   @aria-current="`${window.location.pathname === url ? 'page' : undefined}`">
+                    ${label || 'Link'}
+                </a>
+            </li>
+        </template>
+    </ul>
+</details>
