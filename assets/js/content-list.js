@@ -5,18 +5,18 @@
     
     if (!container) return;
     
-    // Configurazione
+    // Configuration
     var itemsPerPage = 5;
     var currentPage = 1;
     var allItems = [];
-    var activeCategory = '';  // Categoria attiva (vuota = tutte)
+    var activeCategory = '';  // Active category (empty = all)
     
-    // Ottieni la categoria dall'attributo data-category del container
+    // Get category from container's data-category attribute
     if (container.getAttribute('data-category')) {
         activeCategory = container.getAttribute('data-category');
     }
     
-    // Ottieni la categoria dalla URL (es: ?category=Blog)
+    // Get category from URL (e.g. ?category=Blog)
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('category')) {
         activeCategory = urlParams.get('category');
@@ -42,7 +42,7 @@
         var pageItems = filteredItems.slice(start, end);
         var html = '';
         
-        // Mostra info categoria attiva
+        // Show active category info
         /* if (activeCategory) {
             html += '<div class="content-filter-info">';
             html += '📁 Categoria: <strong>' + escapeHtml(activeCategory) + '</strong>';
@@ -50,12 +50,18 @@
             html += '</div>';
         } */
         
-        html += '<div class="content-list">';
+        html += '<table class="content-table">';
+        html += '<thead><tr>';
+        html += '<th class="table__head-meta">Title</th>';
+        html += '<th class="table__head-summary">Summary</th>';
+        html += '<th class="table__head-taxonomies">Category / Tags</th>';
+        html += '</tr></thead>';
+        html += '<tbody>';
         
         for (var i = 0; i < pageItems.length; i++) {
             var item = pageItems[i];
             var date = new Date(item.date_published);
-            var formattedDate = date.toLocaleDateString('it-IT', {
+            var formattedDate = date.toLocaleDateString('en-EN', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
@@ -64,29 +70,19 @@
             // Tags
             var tagsHtml = '';
             if (item.Tags && item.Tags.length) {
-                tagsHtml = '<div class="content-tags">';
                 for (var t = 0; t < item.Tags.length; t++) {
-                    tagsHtml += '<span class="content-tag">#' + escapeHtml(item.Tags[t]) + '</span>';
+                    tagsHtml += '<span class="content-tag">#' + escapeHtml(item.Tags[t]) + '</span> ';
                 }
-                tagsHtml += '</div>';
             }
             
-            html += '<article class="content-card">';
-            html += '<h2><a href="' + escapeHtml(item.url) + '">' + escapeHtml(item.title) + '</a></h2>';
-            html += '<div class="content-meta">';
-            html += '<span class="content-date">📅 ' + formattedDate + '</span>';
-            if (item.Category) {
-                html += '<span class="content-category">' + escapeHtml(item.Category) + '</span>';
-            }
-            html += '</div>';
-            if (item.summary) {
-                html += '<p class="content-summary">' + escapeHtml(item.summary) + '</p>';
-            }
-            html += tagsHtml;
-            html += '</article>';
+            html += '<tr class="list__row">';
+            html += '<td class="list__data-meta"><span class="list__data-title"><a href="' + escapeHtml(item.url) + '">' + escapeHtml(item.title) + '</a></span> <span class="list__data-date">' + formattedDate + '</span></td>';
+            html += '<td class="list__data-summary">' + (item.summary ? escapeHtml(item.summary) : '—') + '</td>';
+            html += '<td class="list__data-taxonomies"><div class="list__data-category">In: ' + (item.Category ? escapeHtml(item.Category) : '—') + '</div><div class="list__data-tags">' + (tagsHtml || '—') + '</div></td>';
+            html += '</tr>';
         }
         
-        html += '</div>';
+        html += '</tbody></table>';
         
         if (pageItems.length === 0) {
             if (activeCategory) {
@@ -101,7 +97,7 @@
         container.innerHTML = html;
         renderPagination(filteredItems.length);
         
-        // Attacca evento per rimuovere filtro
+        // Attach event to remove filter
         var clearLink = container.querySelector('.clear-filter');
         if (clearLink) {
             clearLink.onclick = function(e) {
@@ -109,7 +105,7 @@
                 activeCategory = '';
                 currentPage = 1;
                 renderItems();
-                // Aggiorna URL senza category
+                // Update URL without category
                 var newUrl = window.location.pathname;
                 window.history.pushState({}, '', newUrl);
             };
@@ -165,7 +161,10 @@
                     btn.onclick = function(e) {
                         currentPage = parseInt(page);
                         renderItems();
-                        window.scrollTo(0, 0);
+                        var target = document.getElementById('list-title');
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
                     };
                 }
             })(buttons[i]);
@@ -184,7 +183,7 @@
     // Load data
     fetch('/feed.json')
         .then(function(response) {
-            if (!response.ok) throw new Error('Feed non trovato');
+            if (!response.ok) throw new Error('Feed not found');
             return response.json();
         })
         .then(function(feed) {

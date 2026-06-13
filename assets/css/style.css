@@ -176,53 +176,44 @@ md-block code {
    8. CONTENT LIST
    ============================================================ */
 
-.content-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+#content-list > table.content-table > thead {
+    display: none;
 }
 
-.content-card {
-    border-bottom: 1px solid var(--pico-muted-border-color);
-    padding-bottom: 1.5rem;
+#content-list > table.content-table > tbody {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
-.content-card h2 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
+#content-list > table > tbody > tr.list__row{
+    display: grid;
+    margin-bottom: 2rem;
 }
 
-.content-card h2 a {
-    text-decoration: none;
-    color: var(--pico-color);
+#content-list tr.list__row > td {
+    border-bottom: 0;
+    padding-left: 0;
+    padding-bottom: 0;
 }
 
-.content-card h2 a:hover {
-    text-decoration: underline;
-    color: var(--pico-primary);
-}
-
-.content-meta {
+#content-list tr.list__row > td.list__data-meta {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.875rem;
-    color: var(--pico-muted-color);
 }
 
-.content-category {
-    background-color: var(--pico-primary-background);
-    color: var(--pico-primary-inverse);
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
+#content-list tr.list__row > td.list__data-summary {
+    padding-top: .8rem;
+    padding-bottom: .6rem;
 }
 
-.content-summary {
-    margin: 0.75rem 0;
-    color: var(--pico-muted-color);
-    line-height: 1.5;
+#content-list tr.list__row > td.list__data-taxonomies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .content-tags {
@@ -250,7 +241,6 @@ md-block code {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 2rem;
     padding: 1rem 0;
 }
 

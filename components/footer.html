@@ -8,17 +8,18 @@
         <ul class="footer__links-list">
             <template json-each="footerLinks">
                 <li class="footer__link-item">
+                    <template json-if="icon">
+                        <img class="footer__link-icon" 
+                                @src="`/assets/img/social/${icon}.svg`" 
+                                @alt="`${altText || ''}`"
+                                loading="lazy">
+                    </template>
                     <a class="footer__link" 
                        @href="`${url || '#'}`" 
                        @title="`${altText || ''}`" 
                        target="_blank" 
                        rel="noopener noreferrer">
-                        <template json-if="icon">
-                            <img class="footer__link-icon" 
-                                 @src="`/assets/img/social/${icon}.svg`" 
-                                 @alt="`${altText || ''}`"
-                                 loading="lazy">
-                        </template>
+                        
                         <span class="footer__link-label">${label}</span>
                     </a>
                 </li>    

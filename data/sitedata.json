@@ -1,7 +1,7 @@
 {
   "siteURL": "https://example.com",
   "siteName": "🚫🛠️🪜 NoBS Website",
-  "siteTagline": "Personal websites made easy and cheap",
+  "siteTagline": "Make free and easy personal websites",
   
   "menu": [
     { "label": "Home", "url": "/" },
@@ -14,7 +14,7 @@
   
   "footerLinks": [
     { "label": "Reddit", "url": "https://reddit.com/tuonome", "altText": "Link to Reddit profile", "icon": "reddit"},
-    { "label": "X", "url": "https://x.com/tuonome", "altText": "Link to X profile", "icon": ""},
+    { "label": "X", "url": "https://x.com/tuonome", "altText": "Link to X profile", "icon": "x"},
     { "label": "Mastodon", "url": "https://mastodon.social/@tuonome", "altText": "Link to Mastodon profile", "icon": "mastodon"}
   ],
   
