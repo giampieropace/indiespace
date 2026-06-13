@@ -10,7 +10,7 @@
                 <li class="footer__link-item">
                     <template json-if="icon">
                         <img class="footer__link-icon" 
-                                @src="`/assets/img/social/${icon}.svg`" 
+                                @src="`/assets/img/svg/${icon}.svg`" 
                                 @alt="`${altText || ''}`"
                                 loading="lazy">
                     </template>
@@ -19,7 +19,6 @@
                        @title="`${altText || ''}`" 
                        target="_blank" 
                        rel="noopener noreferrer">
-                        
                         <span class="footer__link-label">${label}</span>
                     </a>
                 </li>    

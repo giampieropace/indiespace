@@ -126,9 +126,9 @@
         
         // Previous button
         if (currentPage > 1) {
-            html += '<button data-page="' + (currentPage - 1) + '" class="secondary">« Precedente</button>';
+            html += '<button data-page="' + (currentPage - 1) + '" class="secondary">« Previuos</button>';
         } else {
-            html += '<button disabled class="secondary">« Precedente</button>';
+            html += '<button disabled class="secondary">« Previuos</button>';
         }
         
         // Page numbers
@@ -144,9 +144,9 @@
         
         // Next button
         if (currentPage < totalPages) {
-            html += '<button data-page="' + (currentPage + 1) + '" class="secondary">Successivo »</button>';
+            html += '<button data-page="' + (currentPage + 1) + '" class="secondary">Next »</button>';
         } else {
-            html += '<button disabled class="secondary">Successivo »</button>';
+            html += '<button disabled class="secondary">Next »</button>';
         }
         
         html += '</div>';

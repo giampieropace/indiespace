@@ -228,7 +228,7 @@ md-block code {
     padding: 0.2rem 0.6rem;
     background-color: var(--pico-secondary-background);
     color: var(--pico-secondary-inverse);
-    border-radius: 999px;
+    border-radius: 10rem;
 }
 
 
@@ -276,6 +276,9 @@ md-block code {
 
 #article__actions {
     margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
@@ -313,7 +316,6 @@ footer.container {
 }
 
 .footer__link-icon {
-    margin-right: .2rem;
     transform: scale(.8);
 }
 
