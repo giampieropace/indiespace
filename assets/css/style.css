@@ -264,7 +264,8 @@ md-block code {
 .content-pagination span {
     display: inline-flex;
     align-items: center;
-    padding: 0 0.5rem;
+    padding: 0;
+    margin: 0 -.3rem;
     color: var(--pico-muted-color);
 }
 

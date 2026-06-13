@@ -135,10 +135,10 @@
         for (var i = 1; i <= totalPages; i++) {
             if (i === currentPage) {
                 html += '<button class="active">' + i + '</button>';
-            } else if (Math.abs(i - currentPage) <= 2 || i === 1 || i === totalPages) {
+            } else if (Math.abs(i - currentPage) <= 1 || i === 1 || i === totalPages) {
                 html += '<button data-page="' + i + '" class="secondary">' + i + '</button>';
-            } else if (Math.abs(i - currentPage) === 3) {
-                html += '<span>...</span>';
+            } else if (Math.abs(i - currentPage) === 2) {
+                html += '<span> - </span>';
             }
         }
         
