@@ -23,12 +23,21 @@ The idea is simple: drop static `.html` and `.md` files into a folder and have t
 │   └── footer.html
 ├── posts/              # Content (markdown + HTML)
 │   └── 2026-05-20_markdown-syntax/
+│       └── index-html
+│       └── content.md
 ├── data/
 │   └── sitedata.json   # Site-wide configuration
 ├── assets/
 │   ├── css/            # Stylesheets (Pico + custom)
-│   └── js/             # HTMX, md-block, main.js
-└── archetypes/         # Post templates
+│   └── js/             # HTMX, md-block, main.js, etc.
+│   └── img/            # Site-wide used images
+└── archetypes/         # Post templates ready to copy/paste
+    └── _blog-post/
+        └── index.html
+        └── content.md
+    └── _single-page/
+        └── index.html
+        └── content.md
 ```
 
 ## Running locally
