@@ -1,26 +1,26 @@
 (function() {
-    // Aggiungi la classe all'inizio
+    // Add the class at the start
     document.documentElement.classList.add('reduce-fouce');
     
-    // Elementi che devono essere caricati da HTMX
+    // Elements that must be loaded by HTMX
     var elementsToWait = [
         '#header-placeholder',
         '#footer-placeholder'
-        // Aggiungi altri selettori se necessario
+        // Add other selectors if needed
     ];
     
-    // Promises per attendere il caricamento degli elementi HTMX
+    // Promises to wait for HTMX elements to load
     var htmxPromises = elementsToWait.map(function(selector) {
         return new Promise(function(resolve) {
             var element = document.querySelector(selector);
             
             if (!element || element.innerHTML.trim() !== '') {
-                // Elemento già caricato o non presente
+                // Element already loaded or not present
                 resolve();
                 return;
             }
             
-            // Ascolta l'evento htmx:afterSwap
+            // Listen for the htmx:afterSwap event
             function onSwap(event) {
                 if (event.target === element || element.contains(event.target)) {
                     document.removeEventListener('htmx:afterSwap', onSwap);
@@ -30,12 +30,12 @@
             
             document.addEventListener('htmx:afterSwap', onSwap);
             
-            // Timeout di sicurezza (2 secondi)
+            // Safety timeout (2 seconds)
             setTimeout(resolve, 2000);
         });
     });
     
-    // Attendi tutto e poi mostra la pagina
+    // Wait for everything, then show the page
     Promise.race([
         Promise.all(htmxPromises),
         new Promise(function(resolve) { setTimeout(resolve, 2500); })

@@ -4,7 +4,7 @@
 <style>html.reduce-fouce{ opacity: 0;} html.reduce-fouce body{ min-height: 100vh;}</style>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="light dark" />
 
-<!-- Site meta -->
+    <!-- Site meta -->
     <title>My Personal Website</title>
     <meta name="description" content="This is my personal website, take a look around!" />
 
@@ -15,37 +15,31 @@
 <!-- Javascript -->
 <script src="/assets/js/htmx-fouce.js"></script><script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
 </head>
-
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
 <a href="#main" class="skip-to-content">Skip to content</a>
 <div class="header-placeholder"><header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header" ></header></div>
-
 <main class="container fade-in" id="main">
+<article id="intro">
 
-    <article id="intro">
-        <md-block>
-            ### 👋 Hello!
-            
-            Wellcome to my personal website!
-        </md-block>
-    </article>
+    <md-block>
+        ### 👋 Hello!
+        
+        Welcome to my personal website!
+    </md-block>
+
+</article>
 
     <h3 id="list-title">Latest Content</h3>
 
-    <div id="content-list">
-        <span aria-busy="true">Loading...</span>
-    </div>
-        
-    <!-- Container per la paginazione -->
-    <div id="content-pagination"></div>
-    
+<div id="content-list">
+    <span aria-busy="true">Loading...</span>
+</div>
+<!-- Pagination Container -->
+<div id="content-pagination"></div>
 </main>
-
 <div id="footer-placeholder"><footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer></div>
-
 <!-- footer scripts -->
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/content-list.js"></script>
-
 </body>
 </html>

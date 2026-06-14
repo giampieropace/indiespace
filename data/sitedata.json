@@ -10,12 +10,12 @@
     { "label": "Contacts", "url": "/contacts/" }
   ],
 
-  "shareButtonText": "Share this article",
+  "shareButtonText": "Share",
   
   "footerLinks": [
-    { "label": "Reddit", "url": "https://reddit.com/tuonome", "altText": "Link to Reddit profile", "icon": "reddit"},
-    { "label": "X", "url": "https://x.com/tuonome", "altText": "Link to X profile", "icon": "x"},
-    { "label": "Mastodon", "url": "https://mastodon.social/@tuonome", "altText": "Link to Mastodon profile", "icon": "mastodon"}
+    { "label": "Reddit", "url": "https://reddit.com/yourname", "altText": "Link to Reddit profile", "icon": "reddit"},
+    { "label": "X", "url": "https://x.com/yourname", "altText": "Link to X profile", "icon": "x"},
+    { "label": "Mastodon", "url": "https://mastodon.social/@yourname", "altText": "Link to Mastodon profile", "icon": "mastodon"}
   ],
   
   "copyrightText": "©2026 - Giampiero"

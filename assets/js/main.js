@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const btn = document.querySelector('.share-btn');
     
-    if (!btn) return;  // ✅ Ora return è dentro la funzione
+    if (!btn) return;
     
     const shareOrCopy = async () => {
         if (navigator.share) {

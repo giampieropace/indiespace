@@ -45,8 +45,8 @@
         // Show active category info
         /* if (activeCategory) {
             html += '<div class="content-filter-info">';
-            html += '📁 Categoria: <strong>' + escapeHtml(activeCategory) + '</strong>';
-            html += ' <a href="?" class="clear-filter">(rimuovi filtro)</a>';
+            html += '📁 Category: <strong>' + escapeHtml(activeCategory) + '</strong>';
+            html += ' <a href="?" class="clear-filter">(remove filter)</a>';
             html += '</div>';
         } */
         
@@ -86,9 +86,9 @@
         
         if (pageItems.length === 0) {
             if (activeCategory) {
-                container.innerHTML = '<div class="content-empty">📭 Nessun post nella categoria "' + escapeHtml(activeCategory) + '"</div>';
+                container.innerHTML = '<div class="content-empty">📭 No posts in category "' + escapeHtml(activeCategory) + '"</div>';
             } else {
-                container.innerHTML = '<div class="content-empty">📭 Nessun contenuto trovato</div>';
+                container.innerHTML = '<div class="content-empty">📭 No content found</div>';
             }
             if (paginationContainer) paginationContainer.innerHTML = '';
             return;
@@ -126,9 +126,9 @@
         
         // Previous button
         if (currentPage > 1) {
-            html += '<button data-page="' + (currentPage - 1) + '" class="secondary">« Previuos</button>';
+            html += '<button data-page="' + (currentPage - 1) + '" class="secondary">« Previous</button>';
         } else {
-            html += '<button disabled class="secondary">« Previuos</button>';
+            html += '<button disabled class="secondary">« Previous</button>';
         }
         
         // Page numbers
@@ -192,6 +192,6 @@
         })
         .catch(function(error) {
             console.error('Error loading content:', error);
-            container.innerHTML = '<div class="content-error">❌ Errore nel caricamento dei contenuti</div>';
+            container.innerHTML = '<div class="content-error">❌ Error loading content</div>';
         });
 })();

@@ -1,10 +1,10 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "Titolo del tuo blog",
-  "home_page_url": "https://iltuosito.com/",
-  "feed_url": "https://iltuosito.com/feed.json",
-  "description": "La descrizione del tuo blog.",
-  "authors": [{ "name": "Il tuo nome" }],
+  "title": "Your blog title",
+  "home_page_url": "https://yoursite.com/",
+  "feed_url": "https://yoursite.com/feed.json",
+  "description": "Your blog description.",
+  "authors": [{ "name": "Your name" }],
   "items": [
     {
       "id": "/posts/2026-05-24_how-to-start/",
