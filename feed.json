@@ -1,27 +1,18 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "Your blog title",
-  "home_page_url": "https://yoursite.com/",
-  "feed_url": "https://yoursite.com/feed.json",
-  "description": "Your blog description.",
+  "title": "Indie Space",
+  "home_page_url": "https://indiespace.net/",
+  "feed_url": "https://indiespace.net/feed.json",
+  "description": "guides and articles about the IndieWeb, internet privacy and local-first technology, that is, finding solutions that make one less dependent on big tech’s golden cages.",
   "authors": [{ "name": "Your name" }],
   "items": [
-    {
-      "id": "/posts/2026-05-24_how-to-start/",
-      "url": "/posts/2026-05-24_how-to-start/",
-      "title": "How to start with NoBS Website Framework",
-      "date_published": "2026-05-24",
-      "summary": "Tutorial on how to start your personal website.",
-      "Category": "Blog",
-      "Tags": ["NoBS", "Website", "Framework", "Tutorial", "Getting Started"]
-    },
    {
-      "id": "/posts/2026-05-20_markdown-syntax/",
-      "url": "/posts/2026-05-20_markdown-syntax/",
+      "id": "2026-06-14_markdown-syntax/",
+      "url": "https://indiespace.net/guides/2026-06-14_markdown-syntax/",
       "title": "Markdown Syntax Guide",
-      "date_published": "2026-05-20",
+      "date_published": "2026-06-14",
       "summary": "A shorter version of the markdown syntax guide from https://www.markdownguide.org/basic-syntax/",
-      "Category": "Blog",
+      "Category": "Guides",
       "Tags": ["Markdown", "Syntax", "Tutorial", "Writing", "Guide"]
     }
   ]

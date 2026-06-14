@@ -2,15 +2,15 @@
 <html lang="en-EN" data-theme="dark">
 <head>
 <style>html.reduce-fouce{ opacity: 0;} html.reduce-fouce body{ min-height: 100vh;}</style>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="light dark" />
 
     <!-- Site meta -->
-    <title>How to start with NoBS Website Framework</title>
-    <meta name="description" content="Tutorial on how to start your personal website.">
-  
+    <title>Indie Space Contacts</title>
+    <meta name="description" content="Indie Space Contacts" />
+
 <!-- CSS -->
-<link rel="stylesheet" href="/assets/css/pico.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/prism/prism-dark.css" />
-<!-- Site Icons -->  
+<link rel="stylesheet" href="/assets/css/pico.css" /><link rel="stylesheet" href="/assets/css/style.css" />
+<!-- Site Icons -->
 <link rel="icon" href="/favicon.png" sizes="any" />
 <!-- Javascript -->
 <script src="/assets/js/htmx-fouce.js"></script><script src="/assets/js/htmx.min.js"></script><script src="/assets/js/htmx-json.min.js"></script><script src="/assets/js/marked.min.js"></script><script type="module" src="/assets/js/md-block.js"></script>
@@ -22,15 +22,13 @@
 
     <md-block src="content.md">
         <span aria-busy="true">Loading...</span>
-    </md-block>
 
-<div id="article__actions">
-<button class="share-btn">${shareButtonText}</button>
-</div>
+        <script data-letterbirduser="giampiero" src="https://letterbird.co/embed/v1.js"></script>
+    </md-block>
+    
 </main>
 <div id="footer-placeholder"><footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer></div>
 <!-- footer scripts -->
 <script src="/assets/js/main.js"></script>
-<script src="/assets/js/prism.js"></script>
 </body>
 </html>

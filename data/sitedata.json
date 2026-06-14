@@ -1,22 +1,20 @@
 {
-  "siteURL": "https://example.com",
-  "siteName": "🚫🛠️🪜 NoBS Website",
-  "siteTagline": "Make free and easy personal websites",
+  "siteURL": "https://indiespace.net",
+  "siteName": "Indie 🌌 Space",
+  "siteTagline": "Guides and thoughts on the IndieWeb, internet privacy and local-first technology",
   
   "menu": [
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
-    { "label": "Blog", "url": "/posts/" },
+    { "label": "Guides", "url": "/guides/" },
     { "label": "Contacts", "url": "/contacts/" }
   ],
 
   "shareButtonText": "Share",
   
-  "footerLinks": [
-    { "label": "Reddit", "url": "https://reddit.com/yourname", "altText": "Link to Reddit profile", "icon": "reddit"},
-    { "label": "X", "url": "https://x.com/yourname", "altText": "Link to X profile", "icon": "x"},
-    { "label": "Mastodon", "url": "https://mastodon.social/@yourname", "altText": "Link to Mastodon profile", "icon": "mastodon"}
+ "footerLinks": [
+    { "label": "Contacts", "url": "https://indiespace.net/contacts", "altText": "Get in touch", "icon": "email"}
   ],
   
-  "copyrightText": "©2026 - Giampiero"
+  "copyrightText": "©2026 - IndieSpace.net"
 }
